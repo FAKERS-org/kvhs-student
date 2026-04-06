@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "@fontsource/noto-sans-khmer/400.css";
+@import "@fontsource/noto-sans-khmer/500.css";
+@import "@fontsource/noto-sans-khmer/600.css";
+@import "@fontsource/noto-sans-khmer/700.css";
+
+@theme {
+  --font-khmer: "Noto Sans Khmer", system-ui, sans-serif;
+}
+
+:root {
+  --background: #f9fafb;
+  --foreground: #111827;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-khmer {
+  font-family: var(--font-khmer);
+}
+
+/* Safe area for iOS notch and home indicator */
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Smooth scroll */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Remove default tap highlight on mobile */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
