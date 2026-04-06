@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { announcements, attendanceHistory, assignments, student } from "@/lib/mock-data";
 
 const menuItems = [
@@ -82,7 +82,7 @@ export default function MorePage() {
           return (
             <Link
               key={item.href}
-              href={item.href}
+              to={item.href}
               className={`flex items-center gap-3 rounded-2xl border p-4 transition-colors active:brightness-95 ${item.color}`}
             >
               <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl ${item.iconBg}`}>
@@ -115,7 +115,7 @@ export default function MorePage() {
           <p className="text-xs text-gray-500 font-khmer">{student.gradeKh} · {student.id}</p>
         </div>
         <Link
-          href="/more/profile"
+          to="/more/profile"
           className="text-xs text-blue-600 font-khmer"
         >
           មើល →

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { attendanceHistory, announcements, weeklySchedule, assignments, student } from "@/lib/mock-data";
 
 function getTodayClasses() {
@@ -80,7 +81,7 @@ export default function DashboardPage() {
       <section>
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-sm font-bold text-gray-700 font-khmer">ម៉ោងរៀនថ្ងៃនេះ</h2>
-          <a href="/schedule" className="text-xs text-blue-600 font-khmer">មើលទាំងអស់ →</a>
+          <Link to="/schedule" className="text-xs text-blue-600 font-khmer">មើលទាំងអស់ →</Link>
         </div>
         <div className="flex flex-col gap-2">
           {todayClasses.slice(0, 3).map((cls) => (
@@ -105,7 +106,7 @@ export default function DashboardPage() {
       <section>
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-sm font-bold text-gray-700 font-khmer">កិច្ចការជិតដល់</h2>
-          <a href="/more/assignments" className="text-xs text-blue-600 font-khmer">មើលទាំងអស់ →</a>
+          <Link to="/more/assignments" className="text-xs text-blue-600 font-khmer">មើលទាំងអស់ →</Link>
         </div>
         <div className="flex flex-col gap-2">
           {upcomingAssignments.map((task) => {
@@ -133,7 +134,7 @@ export default function DashboardPage() {
         <section>
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-sm font-bold text-gray-700 font-khmer">សេចក្តីប្រកាសថ្មី</h2>
-            <a href="/more/announcements" className="text-xs text-blue-600 font-khmer">មើលទាំងអស់ →</a>
+            <Link to="/more/announcements" className="text-xs text-blue-600 font-khmer">មើលទាំងអស់ →</Link>
           </div>
           <div className="flex flex-col gap-2">
             {unreadAnnouncements.map((ann) => (

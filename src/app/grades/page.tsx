@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { grades, GradeEntry } from "@/lib/mock-data";
 

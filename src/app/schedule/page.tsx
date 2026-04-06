@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { weeklySchedule, ClassSession } from "@/lib/mock-data";
 

@@ -1,5 +1,11 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+<!-- BEGIN:vite-react-agent-rules -->
+# This is a Vite 8 + React 19 + TypeScript SPA
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+- Framework: **Vite** (not Next.js). Entry: `index.html` → `src/main.tsx` → `src/App.tsx`
+- Routing: **react-router-dom v7** (`BrowserRouter`, `Routes`, `Route`, `Link to=`, `useLocation`)
+- Styles: **Tailwind CSS v4** via `@tailwindcss/vite` plugin (no `tailwind.config.js`)
+- Fonts: **@fontsource/noto-sans-khmer** imported in `src/app/globals.css`
+- Build: `npm run build` (runs `tsc -b && vite build`)
+- Dev: `npm run dev`
+- Lint: `npm run lint`
+<!-- END:vite-react-agent-rules -->
