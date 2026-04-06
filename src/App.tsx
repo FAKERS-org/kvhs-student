@@ -1,6 +1,18 @@
 import './App.css'
 
-const student = {
+interface Student {
+  name: string
+  nameEn: string
+  id: string
+  grade: string
+  section: string
+  school: string
+  schoolEn: string
+  year: string
+  photoUrl: string | null
+}
+
+const student: Student = {
   name: 'សុខ សុភា',
   nameEn: 'Sok Sophea',
   id: 'KV-2024-001',
@@ -9,7 +21,7 @@ const student = {
   school: 'វិទ្យាល័យក្រវាន់ហ៊ុនសែន',
   schoolEn: 'Kravanh Hun Sen High School',
   year: '2024–2025',
-  photoUrl: null as string | null,
+  photoUrl: null,
 }
 
 const subjects = [
